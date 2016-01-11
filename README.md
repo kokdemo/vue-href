@@ -24,6 +24,7 @@ sorry, I will add English version description soon.
 ###怎么用？
 
 直接引入vue-href.js，将来可能会写一些更优雅的方式，目前嘛，我懒。
+你可以下载repo，然后看一下demo下面是怎么写的。
 
 ###花式玩法？
 
