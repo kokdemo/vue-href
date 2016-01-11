@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo of vue-href</title>
+</head>
+<body>
+<div id="demo1" v-href="url">
+    click me to google
+</div>
+<div id="demo2" v-href:blank="'http://google.com'">
+    click me to open new tab to google
+</div>
+<div id="demo3" v-href:bl="[url,before]">
+    click me to make a before callback
+</div>
+<div id="demo4" v-href:new="[url,,after]">
+    click me to make a after callback
+</div>
+<script src="vue.js"></script>
+<script src="vue-href.js"></script>
+<script>
+    var page = new Vue({
+        el: 'body',
+        data: {
+            url: 'http://google.com'
+        },
+        methods:{
+            before:function(){
+                console.info('before')
+            },
+            after:function(){
+                console.info('after')
+            }
+        }
+    });
+</script>
+</body>
+</html>
