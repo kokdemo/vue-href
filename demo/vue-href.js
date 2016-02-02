@@ -20,6 +20,13 @@
             },
             update: function (href) {
                 var arg = this.arg;
+                var mod = this.modifiers;
+                if(mod.a){
+                    this.el.style.textDecoration = "underline";
+                    this.el.style.cursor = "pointer";
+                    this.el.style.color = "rgb(0,0,238)"
+                }
+
                 this.el.addEventListener("click", function () {
                     var url = '';
                     if (isArray(href)) {
@@ -44,7 +51,6 @@
                     if (href[2] && typeof href[2] === "function") {
                         href[2]();
                     }
-
                 });
             }
         })
